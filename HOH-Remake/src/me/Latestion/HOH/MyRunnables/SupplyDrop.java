@@ -35,30 +35,35 @@ public class SupplyDrop extends BukkitRunnable {
         createDrop(higestBlock);
 	}
  
-	 public void createDrop(Location loc) {
+	 public void createDrop(Location loc) throws InterruptedException {
         World workWorld = plugin.game.loc.getWorld();
         workWorld.getBlockAt(loc.clone()).setType(Material.LIGHT_BLUE_WOOL);
         workWorld.getBlockAt(loc.clone().add(0.0, 1.0, 0.0)).setType(Material.CHEST);
         workWorld.getBlockAt(loc.clone().add(0.0, 4.0, 0.0)).setType(Material.CAMPFIRE);
         workWorld.getBlockAt(loc.clone().add(0.0, 5.0, 0.0)).setType(Material.WHITE_WOOL);
+        Thread.sleep(100);
         workWorld.getBlockAt(loc.clone().add(1.0, 4.0, 0.0)).setType(Material.LIGHT_BLUE_WOOL);
         workWorld.getBlockAt(loc.clone().add(0.0, 4.0, 1.0)).setType(Material.LIGHT_BLUE_WOOL);
         workWorld.getBlockAt(loc.clone().add(-1.0, 4.0, 0.0)).setType(Material.LIGHT_BLUE_WOOL);
         workWorld.getBlockAt(loc.clone().add(0.0, 4.0, -1.0)).setType(Material.LIGHT_BLUE_WOOL);
+        Thread.sleep(100);
         workWorld.getBlockAt(loc.clone().add(1.0, 1.0, 0.0)).setType(Material.OAK_PLANKS);
         workWorld.getBlockAt(loc.clone().add(-1.0, 1.0, 0.0)).setType(Material.OAK_PLANKS);
         workWorld.getBlockAt(loc.clone().add(0.0, 1.0, 1.0)).setType(Material.OAK_PLANKS);
         workWorld.getBlockAt(loc.clone().add(0.0, 1.0, -1.0)).setType(Material.OAK_PLANKS);
+        Thread.sleep(100);
         for (int i = 1; i < 4; ++i) {
             workWorld.getBlockAt(loc.clone().add(1.0, i, 1.0)).setType(Material.OAK_FENCE);
             workWorld.getBlockAt(loc.clone().add(1.0, i, -1.0)).setType(Material.OAK_FENCE);
             workWorld.getBlockAt(loc.clone().add(-1.0, i, 1.0)).setType(Material.OAK_FENCE);
             workWorld.getBlockAt(loc.clone().add(-1.0, i, -1.0)).setType(Material.OAK_FENCE);
         }
+        Thread.sleep(100);
         workWorld.getBlockAt(loc.clone().add(1.0, 4.0, 1.0)).setType(Material.WHITE_WOOL);
         workWorld.getBlockAt(loc.clone().add(1.0, 4.0, -1.0)).setType(Material.WHITE_WOOL);
         workWorld.getBlockAt(loc.clone().add(-1.0, 4.0, 1.0)).setType(Material.WHITE_WOOL);
         workWorld.getBlockAt(loc.clone().add(-1.0, 4.0, -1.0)).setType(Material.WHITE_WOOL);
+        Thread.sleep(100);
         Bukkit.broadcastMessage(ChatColor.BOLD + "" + ChatColor.GOLD + "Supply drop at X:" + loc.getBlockX() + " Z:" + loc.getBlockZ());
         Chest chest = (Chest )workWorld.getBlockAt(loc.clone().add(0.0, 1.0, 0.0)).getState();
         List<String> getRandomAll = new ArrayList<String>();

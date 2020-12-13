@@ -55,7 +55,7 @@ public class HideOrHunt extends JavaPlugin {
 		this.saveDefaultConfig();
 		GameState.setGamestate(GameState.OFF);
 		sbUtil = new ScoreBoardUtil(this);
-		new Metrics(this, 8350);
+		new Metrics(this, 9634);
 		hoh();
 		registerAll();
 	}
@@ -66,13 +66,8 @@ public class HideOrHunt extends JavaPlugin {
 	}
 
     private void hoh() {
-    	ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
-    	console.sendMessage("        " +                  ChatColor.RED + " _______ ");
-    	console.sendMessage(ChatColor.AQUA + "|      |" + ChatColor.RED + "|       |" + ChatColor.AQUA + "|      |");
-    	console.sendMessage(ChatColor.AQUA + "|      |" + ChatColor.RED + "|       |" + ChatColor.AQUA + "|      |" + ChatColor.WHITE + "    Version: " + this.getDescription().getVersion()); 
-    	console.sendMessage(ChatColor.AQUA + "|------|" + ChatColor.RED + "|       |" + ChatColor.AQUA + "|------|" + ChatColor.WHITE + "    By: Latestion"); 
-    	console.sendMessage(ChatColor.AQUA + "|      |" + ChatColor.RED + "|       |" + ChatColor.AQUA + "|      |"); 
-    	console.sendMessage(ChatColor.AQUA + "|      |" + ChatColor.RED + "|_______|" + ChatColor.AQUA + "|      |");
+    	ConsoleCommandSender console = Bukkit.getServer().getConsoleSender(); 
+    	console.sendMessage(ChatColor.AQUA + "[HideOrHunt] Orginal By: Latestion, Fork By: Skyy. Version: " + this.getDescription().getVersion()); 
     	hasUpdate();
     }
     
@@ -83,7 +78,7 @@ public class HideOrHunt extends JavaPlugin {
                 getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "You are using an older version of Hide Or Hunt!");
                 getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "Download the newest version here:");
-                getServer().getConsoleSender().sendMessage(ChatColor.DARK_AQUA + "https://www.spigotmc.org/resources/hide-or-hunt-plugin.79307/");
+                getServer().getConsoleSender().sendMessage(ChatColor.DARK_AQUA + "https://github.com/BurnhamR/HideOrHunt-Bukkit/releases");
                 getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 return true;
             } else {

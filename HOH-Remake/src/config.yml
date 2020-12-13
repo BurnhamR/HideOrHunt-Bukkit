@@ -1,37 +1,57 @@
-# If you have any doubts regarding this please join my discord server for more questions
+#####################################
+#                                   #
+#  ||     ||  |||||||||  ||     ||  #
+#  ||     ||  ||     ||  ||     ||  #
+#  ||     ||  ||     ||  ||     ||  #
+#  ||     ||  ||     ||  ||     ||  #
+#  |||||||||  ||     ||  |||||||||  #
+#  |||||||||  ||     ||  |||||||||  #
+#  ||     ||  ||     ||  ||     ||  #
+#  ||     ||  ||     ||  ||     ||  #
+#  ||     ||  ||     ||  ||     ||  #
+#  ||     ||  |||||||||  ||     ||  #
+#                                   #
+#####################################
 
-# IF set to false, It wont allow any OPed player to Play the game!
+# Set to true to allow OPed users to play the game!
 Allow-Op: true
 
-WorldBorder: 200 # sets the worldborder from the location of the player who starts the game! DIAMETER !
+WorldBorder: 175 # sets the worldborder from the location of the player who starts the game! DIAMETER !
 
-SB-Title: "&6HideOrHunt"
+SB-Title: "&bHoH"
 
-# Normal kits
+# Starting kits
 # Do not add beacon into it!
 Kits:
+  - STONE_SWORD, 1
+  - STONE_SWORD, 1
   - STONE_PICKAXE, 1
   - STONE_PICKAXE, 1
   - STONE_AXE, 1
   - STONE_AXE, 1
   - STONE_SHOVEL, 1
   - STONE_SHOVEL, 1
+  - STONE_HOE, 1
+  - STONE_HOE, 1
   - COOKED_BEEF, 64
+  - REDSTONE_BLOCK, 16
+  - STICKY_PISTON, 5
+  - REPEATER, 4
 
 # Potions that will be given to the player!
 # https://minecraftitemids.com/types/potion
 # Use the above link to get the item id with ease and sprecify the number of items you would like to get!
 Kits-Potion:
-  - minecraft:potion{Potion:long_invisibility} 1 # 1 represents the number of potions
+  - minecraft:potion{Potion:long_invisibility} 2 # 1 represents the number of potions
 
 # Adds Certain Potion Effect On The Start of the game!
 # SLOW_FALLING, 10, 1
-# SLOW_FALLING --> Represent Which Type Of Effect
-# 10 --> Represent Duration. In seconds
-# 1 --> Represent strength of the potion effect
+# Effect
+# Seconds
+# Strength
 Enable-Effect-On-Start: true
 Effect-On-Start:
-  - SLOW_FALLING, 10, 1
+  - SLOW_FALLING, 30, 1
 
 # Adds Certain Potion Effect On The Start of the game!
 # INVISIBILITY, 900, 5, 900
@@ -41,34 +61,46 @@ Effect-On-Start:
 # 900 --> Reprsents AFTER WHEN to apply that effect to the players in SECONDS!
 Enable-Effect-After-Start: true
 Effect-After-Start:
-  - INVISIBILITY, 900, 5, 900
+  - INVISIBILITY, 600, 5, 300
 
-Ban-Player-On-Death: true # Bans the player on death
+Ban-Player-On-Death: false # Bans the player on death
 
 Inventory-Keep: 20 # Inventory keep chance! Compared out of 100. Keep 0 for disabling it!
 
 #Gives player item each time they respawn
 # Personally 32 iron is best because, A full set of iron 24iron, set of tooks 7 iron and a shield costs 32 iron!
 Item-On-Respawn:
-  - IRON_INGOT, 32
-  - OAK_WOOD, 16
+  - IRON_INGOT, 5
+  - OAK_WOOD, 4
 
 # The plugin will pick any one combination of items between 1 and 2 from the above example. You can have unlimited amount of combinations!
 # You can even use AIR to make the chest look better but thats all up to you.
-Auto-Supply-Drops: true
-Supply-Drop-Delay: 10 # Delay between supply drops in minutes
+Auto-Supply-Drops: false
+Supply-Drop-Delay: 15 # Delay between supply drops in minutes
 Supply-Drop-Items:
   1:
     - BOW, 1
     - ARROW, 16
   2:
-   - WHITE_WOOL, 1
+    - DIAMOND_ORE, 1
+    - AIR, 7
+    - DIAMOND_ORE, 1
+    - AIR, 9
+    - DIAMOND_ORE, 1
+    - AIR, 7
+    - DIAMOND_ORE, 1
+  3:
+    - AIR, 11
+    - COOKED_BEAF, 32
+    - ENCHANTED_GOLDEN_APPLE, 1
+    - COOKED_BEAF, 32
+
 
 # Enables Auto Episodes
 Auto-Episodes: true
 Grace-Period: true # Enable / Disable Grace Period. Makes the 1st ep grace period
 Grace-Period-Peaceful: true # Makes grace period truly peaceful
-Episode-Time: 30 # Grace period duration. In minutes!
+Episode-Time: 5 # Grace period duration. In minutes!
 
 # Sends Chat Reminder for episode endings
 # 600, "&620 minutes remaining for episode %ep% end!"
@@ -76,29 +108,21 @@ Episode-Time: 30 # Grace period duration. In minutes!
 # Duration is also in seconds
 # If you have any doubts regarding this please join my discord server for more questions
 Episode-Reminders:
-  - 600, "&620 minutes remaining for episode %ep% end!"
-  - 1200, "&610 minutes remaining for episode %ep% end!"
-  - 1500, "&65 minutes remaining for episode %ep% end!"
-  - 1740, "&61 minutes remaining for episode %ep% end!"
-  - 1770, "&630 seconds remaining for episode %ep% end!"
-  - 1790, "&610 seconds remaining for episode %ep% end!"
-  - 1795, "&65 seconds remaining for episode %ep% end!"
-  - 1796, "&64 seconds remaining for episode %ep% end!"
-  - 1797, "&63 seconds remaining for episode %ep% end!"
-  - 1798, "&62 seconds remaining for episode %ep% end!"
-  - 1799, "&61 seconds remaining for episode %ep% end!"
-  - 1800, "&60 seconds remaining for episode %ep% end!"
-  
-Episode-End-Break-Time: 60 # Break time when a episode ends! In seconds. Set it to 0 to disable it
+ - 600, "&620 minutes remaining for episode %ep% end!"
 
-Team-Damage: false # On or off team damage 
+
+Episode-End-Break-Time: 5 # Break time when a episode ends! In seconds. Set it to 0 to disable it
+
+Team-Damage: false # Should team mates be able to hit each other
 
 Rules-Messages:
-  - "&4Rules"
-  - "&2Your Rules"
-  
+  - "&4&lRules"
+  - "&f[1] Rule List"
+
+# PlaceHolders:
 # %message%
 # %playername%
 # %playerteam%
 Main-Chat-Format: "&f[&c%playerteam%&f] &f%playername% &7>> &f%message%"
 Team-Chat-Format: "&f[&2TeamChat&f] &f%playername% &7>> &f%message%"
+

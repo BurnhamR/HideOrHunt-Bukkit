@@ -36,7 +36,7 @@ public class Bar extends BukkitRunnable {
 	}
 	
 	public void createBar() {
-		bar = Bukkit.createBossBar(format(ChatColor.GREEN + "Alive Teams: " + plugin.game.getAliveTeams().size()), BarColor.GREEN, BarStyle.SOLID);
+		bar = Bukkit.createBossBar(format(ChatColor.GREEN + "Join HideOrHunt.com - Teams Alive:" + plugin.game.getAliveTeams().size()), BarColor.GREEN, BarStyle.SOLID);
 		bar.setVisible(true);
 		addAllPlayer();
 		

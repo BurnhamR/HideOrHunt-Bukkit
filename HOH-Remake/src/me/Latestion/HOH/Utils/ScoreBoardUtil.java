@@ -76,8 +76,8 @@ public class ScoreBoardUtil {
 	
 	
 	public void setAsthetic() {
-	    Score top = obj.getScore("\ufe4b\ufe4b\ufe4b\ufe4b\ufe4b\ufe4b\ufe4b\ufe4b\ufe4b\ufe4b");
-	    Score bot = obj.getScore("\ufe4f\ufe4f\ufe4f\ufe4f\ufe4f\ufe4f\ufe4f\ufe4f\ufe4f\ufe4f");
+	    Score top = obj.getScore("----------");
+	    Score bot = obj.getScore("----------");
 	    Score strTeam = obj.getScore(ChatColor.BOLD + "" + ChatColor.RED + "Teams:");
         top.setScore(plugin.game.getTeams().size() + 2);
         bot.setScore(0);

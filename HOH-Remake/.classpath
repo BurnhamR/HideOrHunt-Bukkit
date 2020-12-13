@@ -3,5 +3,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/User/Desktop/Totem test Se/spigot.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Rj/Downloads/spigot-api-1.16.1-R0.1-20200728.090915-128-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Rj/Downloads/spigot-api-1.16.1-R0.1-20200728.090915-128.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Rj/Downloads/gson-2.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
